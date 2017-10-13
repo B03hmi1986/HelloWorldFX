@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 
 public class Main extends Application {
-
+// Test
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
