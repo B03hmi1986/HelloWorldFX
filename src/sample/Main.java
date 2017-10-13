@@ -1,10 +1,14 @@
 package sample;
 
-import javafx.application.Application;
+
 import javafx.fxml.FXMLLoader;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -14,10 +18,7 @@ public class Main extends Application {
 // Test
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
 
         //Lyout Container erstellen
         VBox vbox1 = new VBox();
@@ -27,6 +28,7 @@ public class Main extends Application {
         //Komponenten erstellen
         Label label = new Label();
         Button button1 = new Button("ACTION");
+        button1.setOnAction(e -> label.setText("Hallo Welt!"));
 
         //Label und Button in den Scene Graph einfügen
         vbox1.getChildren().add(button1);
